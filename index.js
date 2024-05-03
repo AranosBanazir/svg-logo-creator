@@ -21,19 +21,22 @@ const buildQuestions = [
 {
     name: 'text',
     type: 'input',
-    message: 'Logo text:',
+    message: 'Logo text (must be 4 characters or less):',
+    validate: i => i.length > 4 ? false : true,
     prefix: '',
 },
 {
     name: 'shapeType',
     type: 'list',
+    message: 'Pick a type of shape:',
     choices: ['Circle', 'Square', 'Triangle'],
     prefix:'',
 },
 {
     name: 'svgFileName',
     type: 'input',
-    message: 'Name your SVG file:',
+    validate: i => i.length < 3 ? false : true,
+    message: 'Name your SVG file (must be more than 3 characters):',
     prefix: '',
 }
 ]
@@ -63,7 +66,7 @@ function init(){
 
 
 async function makeSVG(shape, filename){
-    await fs.writeFile(`./${filename}.svg`, shape.render())
+    await fs.writeFile(`./examples/${filename}.svg`, shape.render())
     console.log(`Your SVG Logo "${filename}.svg" was created successfully!`)
 }
 

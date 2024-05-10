@@ -1,4 +1,3 @@
-import { write } from "fs";
 import { Square, Circle, Shape, Triangle } from "./lib/shapes.js";
 import fs from 'fs/promises'
 import inquirer from "inquirer";
@@ -21,8 +20,8 @@ const buildQuestions = [
 {
     name: 'text',
     type: 'input',
-    message: 'Logo text (must be 4 characters or less):',
-    validate: i => i.length > 4 ? false : true,
+    message: 'Logo text (must be 3 characters or less):',
+    validate: i => i.length > 3 ? false : true,
     prefix: '',
 },
 {

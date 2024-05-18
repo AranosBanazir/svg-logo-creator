@@ -1,4 +1,4 @@
-# Readme Creator ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+# SVG Logo Creator ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
     
 ## Description 
   
